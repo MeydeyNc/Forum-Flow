@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ForumFlow - Accueil</title>
+    <link rel="stylesheet" type="text/css" href="/static/home.css">
+</head>
+<body>
+    <header>
+        <h1>ForumFlow</h1>
+        <nav>
+            <ul>
+                <li><a href="/home">Accueil</a></li>
+                <li><a href="/create_post">Crée un post !</a></li>
+                <li><a href="/profil">{{.Username}}</a></li>
+                <li><a href="/logout">Se Déconnecter</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="categories">
+            <h2>Catégories</h2>
+            <ul>
+                <li><a href="/posts?category=Général">Général</a></li>
+                <li><a href="/posts?category=Informatique">Informatique</a></li>
+                <li><a href="/posts?category=Jeux Videos">Jeux videos</a></li>
+                <li><a href="/posts?category=Musique">Musique</a></li>
+                <li><a href="/posts?category=Actualité">Actualité</a></li>
+                <li><a href="/posts?category=Evenement de l'année">Évènement de l'année</a></li>
+                <li><a href="/posts?category=Technologie">Technologie</a></li>
+                <li><a href="/posts?category=Art et culture">Art et culture</a></li>
+                <li><a href="/posts?category=Cinema">Cinéma</a></li>
+            </ul>
+        </section>
+        <section class="latest-threads">
+            <h2>Derniers sujets</h2>
+            <ul>
+                {{range .Posts}}
+                <li>
+                    <h3>{{.Title}}</h3>
+                    <p>{{.Content}}</p>
+                    <span class="category">{{.Category}}</span>
+                </li>
+                {{end}}
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 ForumFlow</p>
+    </footer>
+</body>
+</html>

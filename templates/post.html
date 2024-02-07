@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{.Category}} Posts</title>
+</head>
+<body>
+    <h1>{{.Category}} Posts</h1>
+    {{range .Posts}}
+        <div>
+            <h2>{{.Title}}</h2>
+            <p>{{.Content}}</p>
+        </div>
+    {{end}}
+</body>
+</html>

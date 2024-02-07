@@ -1,0 +1,147 @@
+/* Body */
+body {
+    margin: 0;
+    background-color: #1e1e1e;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+header {
+    background-color: #291b40;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav {
+    display: flex;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav li {
+    margin-right: 10px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #3d2c5e;
+}
+
+/* Main content */
+main {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #2e2e2e;
+}
+
+.categories {
+    flex-basis: 20%;
+}
+
+.categories h2 {
+    margin-top: 0;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.categories ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.categories li {
+    margin-bottom: 10px;
+}
+
+.categories a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.categories a:hover {
+    color: #dcdcdc;
+}
+
+.latest-threads {
+    flex-basis: 80%;
+    margin-left: 20px;
+}
+
+.latest-threads h2 {
+    margin-top: 0;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.latest-threads ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.latest-threads li {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ffffff;
+    padding-bottom: 20px;
+}
+
+.latest-threads li:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.latest-threads h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.latest-threads p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.latest-threads .category {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #3d2c5e;
+    color: #ffffff;
+    border-radius: 20px;
+}

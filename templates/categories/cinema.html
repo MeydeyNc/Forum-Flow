@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/posts.css">
+    <title>{{.Category}}</title>
+    <head>
+        <title>{{.Category}} Posts</title>
+    </head>
+    <body>
+        <h1>{{.Category}} postes.</h1>
+        <div class="posts-container">
+            {{range .Posts}}
+                <div class="post-container">
+                    <h2>{{.Title}}</h2>
+                    <div class="category">Catégorie du poste : {{.Category}}.</div>
+                    <p>{{.Content}}</p>
+                    <form method="POST" action="/update_likes">
+                        <input type="hidden" name="postid" value="{{.ID}}">
+                        <button type="submit" name="action" value="like">❤️</button>
+                        <button type="submit" name="action" value="dislike">🚫</button>
+                        <p>Likes: {{.Likes}}</p>
+                    </form>
+                </div>
+            {{end}}
+        </div>
+    </body>
+    <button onclick="location.href='/home'" class="home-button">Retour à l'accueil</button>
+
+
+    

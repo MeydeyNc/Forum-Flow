@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/static/login.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion !</title>
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h1>Forum-Flow Connexion</h1>
+            <form action="/login" method="post">
+                <label for="username">Pseudo</label>
+                <input type="username" name="username" id="username" required>
+                <label for="password">Mot de passe:</label>
+                <input type="password" name="password" id="password" required>
+                {{if .Error}}
+                <div class="error">{{.Error}}</div>
+                {{end}}
+                <button type="submit" class="login-btn">Commence à poster -></button>
+            </form>
+            <form action="/register" method="get" style="display:inline;">
+                <button type="submit">Pas encore inscrit ?</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

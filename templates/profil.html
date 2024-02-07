@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ForumFlow - Profil</title>
+    <link rel="stylesheet" type="text/css" href="/static/home.css">
+    <link rel="stylesheet" type="text/css" href="/static/profil.css">
+</head>
+<body>
+    <header>
+        <h1>ForumFlow</h1>
+        <nav>
+            <ul>
+                <li><a href="/home">Accueil</a></li>
+                <li><a href="/create_post">Crée un post !</a></li>
+                <li><a href="/logout">Se déconnecter</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="profile">
+            <h2>Voici votre profil 🙋‍♂️ <br><br>Coucou : {{.Username}}</h2>
+            <p>Votre adresse mail : {{.Email}}</p>
+            <p>Votre nombre de likes sur le forum : {{.NumLikes}}</p>
+            <p>Votre nombre de dislikes sur le forum: {{.NumDislikes}}</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 ForumFlow</p>
+    </footer>
+</body>
+</html>

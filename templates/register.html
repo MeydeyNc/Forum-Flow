@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/static/register.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription !</title>
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+        <h1>Forum-Flow Inscription</h1>
+    <form action="/register" method="post">
+        <label for="username">Pseudo:</label>
+        <input type="username" name="username" id="username"  pattern="^[^@]*$" title="Ton pseudo ne doit pas contenir de @" required>
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" required>
+        <br>
+        <label for="password">Mot de passe:</label>
+        <input type="password" name="password" id="password">
+        <br>
+        {{if .Error}}
+        <div class="error">{{.Error}}</div>
+        {{end}}
+        <button type="submit" class="login-btn">Je m'enregistre !</button>
+    </form>
+    <form action="/noconnected" method="get" style="display:inline;">
+        <button type="submit">Se connecter en tant qu'invité.</button>
+    </form>
+</div>   
+</div>
+</body>
+</html>
